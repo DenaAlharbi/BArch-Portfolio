@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #f5f5f5;
+    --accent-color: #ffd700;
+    --text-color: #000000;
+    --text-light: #ffffff;
+    --navbar-bg: rgba(0, 0, 0, 0.71);
+    --navbar-hover-border: rgba(255, 255, 0, 0.33);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Nav Bar wrapper including all children */
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    /*z-index: 1000;*/
+}
+
+.navbar {
+    position: relative;
+    /*top: -3.75rem; !* hides it above the viewport *!*/
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.71);
+    backdrop-filter: blur(10px);
+    font-family: 'Inter', sans-serif;
+    /*z-index: 1;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*transition: top 0.6s ease;*/
+}
+
+.navbar.visible {
+    top: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;
+}
+
+.nav-links a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 3.5rem;
+    height: 100%;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7c1717;
+    border-left: 1px solid rgba(255, 255, 0, 0.33);
+    border-right: 1px solid rgba(255, 255, 0, 0.33);
+}
+
+.nav-links a.active {
+    color: #000000;
+}
+
+/* Logo image */
+.logo img {
+    height: 4.375rem;
+    width: auto;
+    object-fit: contain;
+    padding-left: 10%;
+}
+
+
+/* Hamburger menu toggle - only for small screen*/
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #8c2626;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 5%;
+    /*z-index: 2;*/
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 700px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.47);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        /*z-index: 1;*/
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        line-height: 2.8125rem; /* 45px */
+        font-size: 0.875rem;
+        border-top: 1px solid rgb(0, 0, 0);
+        border-bottom: 1px solid rgb(0, 0, 0);
+    }
+
+    .logo img {
+        height: 3.5rem;
+        padding-left: 5%;
+    }
+}
+
+/*css for intro section*/
+.intro-section {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem; /* ~40px */
+}
+
+.intro-wrapper {
+    text-align: left;
+    position: absolute;
+    padding-top: 3%;
+    margin-top: 3rem;
+    top: 40%;
+    left: 5vw;
+    transform: translateY(-50%);
+    max-width: 37.5rem; /* 600px */
+    color: #ffffff;
+
+}
+
+.intro-text {
+    text-align: left;
+
+    font-size: 2rem; /* 40px */
+    line-height: 1.6;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Mobile optimization */
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 1.5rem;
+        height: calc(var(--vh, 1vh) * 100); /* this raises an error but it works and its essential - will fix later*/
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .intro-wrapper {
+        text-align: left;
+        position: relative;
+        top: 30%;
+        left: auto;
+        transform: none;
+        max-width: 100%;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .intro-text {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
