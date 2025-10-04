@@ -3,9 +3,10 @@
     --secondary-color: #000000;
     --accent-color: #DC143C;
     --text-color: #000000;
-    --navbar-bg: rgba(0, 0, 0, 0.38);
+    --navbar-bg: rgba(0, 0, 0, 0);
     --navbar-hover-border: rgb(220, 20, 60);
-    --navbar-hover: rgb(255, 255, 255);
+    --navbar-hover: rgba(255, 255, 255, 0.47);
+    --navbar-border-color: rgb(0, 0, 0) ;
 }
 
 * {
@@ -27,14 +28,15 @@ html, body {
     left: 0;
     width: 100%;
     height: 3.5rem;
+
     /*z-index: 1000;*/
 }
 
 .navbar {
     position: relative;
     /*top: -3.75rem; !* hides it above the viewport *!*/
-    left: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
     height: 3.5rem;
     background-color:  var(--navbar-bg);
     backdrop-filter: blur(10px);
@@ -43,6 +45,9 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-color: var(--navbar-border-color) solid 1px;
+
+
     /*transition: top 0.6s ease;*/
 }
 
@@ -72,21 +77,21 @@ html, body {
 
 .nav-links a:hover {
     color: var(--navbar-hover);
-    border-left: var(--navbar-hover-border);
-    border-right: var(--navbar-hover-border);
+    /*border-left: var(--navbar-hover-border);*/
+    /*border-right: var(--navbar-hover-border);*/
 }
 
 .nav-links a.active {
     color: var(--navbar-hover);
 }
 
-/* Logo image */
-.logo img {
-    height: 4.3rem;
-    width: auto;
-    object-fit: contain;
-    padding-left: 10%;
-}
+/*!* Logo image *!*/
+/*.logo img {*/
+/*    height: 4.3rem;*/
+/*    width: auto;*/
+/*    object-fit: contain;*/
+/*    padding-left: 10%;*/
+/*}*/
 
 
 /* Hamburger menu toggle - only for small screen*/
@@ -135,72 +140,83 @@ html, body {
         border-bottom: 1px solid rgb(0, 0, 0);
     }
 
-    .logo img {
-        height: 3.5rem;
-        padding-left: 5%;
-    }
+    /*.logo img {*/
+    /*    height: 3.5rem;*/
+    /*    padding-left: 5%;*/
+    /*}*/
 }
 
-/*css for intro section*/
-.intro-section {
-    animation: fadeIn 1.5s ease-out;
+
+/*!*css for intro section*!*/
+/*.intro-section {*/
+/*    animation: fadeIn 1.5s ease-out;*/
+/*    padding-top: 4.5rem; !* space below navbar *!*/
+/*}*/
+
+/*.header {*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    padding: 7rem; !* ~40px *!*/
+/*}*/
+
+/*.intro-wrapper {*/
+/*    text-align: left;*/
+/*    position: absolute;*/
+/*    padding-top: 3%;*/
+/*    margin-top: 3rem;*/
+/*    top: 40%;*/
+/*    left: 5vw;*/
+/*    transform: translateY(-50%);*/
+/*    max-width: 37.5rem; !* 600px *!*/
+/*    color: var(--primary-color);*/
+
+/*}*/
+
+.intro-pic {
+    display: block;              /* Removes default inline spacing */
+    width: 100%;                 /* Makes the image span the full width */
+    height: 60vh;
+    margin-top: 4.5rem;          /* Adds white space below navbar (adjust as needed) */
+    padding: 0;                  /* Ensures no extra padding */
+    object-fit: cover;
+    margin-bottom: 2rem; /* space between image and text *//* Optional: crops image nicely if you set a fixed height */
 }
 
-.header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 2.5rem; /* ~40px */
-}
+/*.intro-text {*/
+/*    text-align: left;*/
+/*    font-size: 2rem; !* 40px *!*/
+/*    line-height: 1.6;*/
+/*    font-weight: 400;*/
+/*    color: var(--text-color);*/
+/*}*/
 
-.intro-wrapper {
-    text-align: left;
-    position: absolute;
-    padding-top: 3%;
-    margin-top: 3rem;
-    top: 40%;
-    left: 5vw;
-    transform: translateY(-50%);
-    max-width: 37.5rem; /* 600px */
-    color: var(--primary-color);
+/*!* Mobile optimization *!*/
+/*@media screen and (max-width: 600px) {*/
+/*    .header {*/
+/*        padding: 1.5rem;*/
+/*        height: calc(var(--vh, 1vh) * 100); !* this raises an error but it works and its essential - will fix later*!*/
+/*        align-items: flex-start;*/
+/*        text-align: left;*/
+/*    }*/
 
-}
+/*    .intro-wrapper {*/
+/*        text-align: left;*/
+/*        position: relative;*/
+/*        top: 30%;*/
+/*        left: auto;*/
+/*        transform: none;*/
+/*        max-width: 100%;*/
+/*        padding-top: 0;*/
+/*        width: 100%;*/
+/*    }*/
 
-.intro-text {
-    text-align: left;
-
-    font-size: 2rem; /* 40px */
-    line-height: 1.6;
-    font-weight: 400;
-    color: var(--text-color);
-}
-
-/* Mobile optimization */
-@media screen and (max-width: 600px) {
-    .header {
-        padding: 1.5rem;
-        height: calc(var(--vh, 1vh) * 100); /* this raises an error but it works and its essential - will fix later*/
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .intro-wrapper {
-        text-align: left;
-        position: relative;
-        top: 30%;
-        left: auto;
-        transform: none;
-        max-width: 100%;
-        padding-top: 0;
-        width: 100%;
-    }
-
-    .intro-text {
-        font-size: 1.25rem;
-        line-height: 1.5;
-        text-align: left;
-    }
-}
+/*    .intro-text {*/
+/*        font-size: 1.25rem;*/
+/*        line-height: 1.5;*/
+/*        text-align: left;*/
+/*    }*/
+/*}*/
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -211,5 +227,48 @@ html, body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* spacing between image and text */
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-pic {
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.about-text {
+    width: 65%;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-left: 3rem;
+}
+@media screen and (max-width: 700px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-pic,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text {
+        font-size: 1.25rem;
     }
 }
