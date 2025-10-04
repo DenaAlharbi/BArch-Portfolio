@@ -1,2 +1,2 @@
 # BArch-Portfolio
-A portfolio i made for Sadeen Alhejili to showcase her work
+A portfolio I made for Sadeen Maher to showcase her work and for me to practice using Tailwind for the first time
