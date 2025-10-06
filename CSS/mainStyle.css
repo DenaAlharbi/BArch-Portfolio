@@ -271,16 +271,32 @@ html, body {
     .about-text {
         font-size: 1.25rem;
     }
-}.projects-container {
-     display: flex;
-     flex-direction: column;
-     gap: 3rem;
-     padding: 4rem 2rem;
-     /*background-color: var(--primary-color);*/
-     align-items: center;
- }
+}/* Container for all projects */
+.projects-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    align-items: center;
+}
 
+/* Central vertical line connecting all projects */
+.spine-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--accent-color);
+    z-index: 0;
+}
+
+/* Each project block */
 .project-block {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -289,12 +305,19 @@ html, body {
     width: 100%;
 }
 
+/* Caption on the left */
 .project-caption {
+    flex: 1;
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-color);
-    flex: 1;
     text-align: left;
+}
+
+/* Image in the center */
+.project-image-wrapper {
+    position: relative;
+    width: 50%;
 }
 
 .project-image {
@@ -305,13 +328,27 @@ html, body {
     filter: grayscale(100%);
 }
 
+/* Number on the right */
 .project-number {
+    flex: 1;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--accent-color);
-    flex: 1;
     text-align: right;
 }
+
+/* Horizontal line from last project to right edge */
+.project-block:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 100vw;
+    background-color: var(--accent-color);
+}
+
+/* Responsive layout for mobile */
 @media screen and (max-width: 700px) {
     .project-block {
         flex-direction: column;
@@ -325,7 +362,119 @@ html, body {
         width: 100%;
     }
 
+    .project-image-wrapper {
+        width: 100%;
+    }
+
     .project-image {
         width: 100%;
     }
+}
+/* Main contact section */
+.contact-container {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 5rem 2rem;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+/* Intro text */
+.contact-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-intro {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    color: #ccc;
+}.contact-columns {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 2rem; /* tighter spacing */
+     flex-wrap: wrap;
+     margin-bottom: 3rem;
+     max-width: 700px; /* limits total width */
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+.contact-details,
+.social-section {
+    flex: 1 1 300px; /* allows wrapping but keeps them narrow */
+    max-width: 320px;
+}
+
+
+.contact-details h3,
+.social-section h3 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.contact-details a,
+.social-links a {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details a:hover,
+.social-links a:hover ,
+.credit-links a :hover{
+    color: var(--accent-color);
+}
+
+/* Social links list */
+.social-links {
+    list-style: none;
+    padding: 0;
+}.website-credit {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+     margin-top: 4rem;
+     font-size: 1rem; /* scales with root font size */
+     color: #999;
+     text-align: center;
+     padding: 2rem 1rem;
+ }
+
+.website-credit a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+.website-credit a:hover {
+    color: var(--accent-color); /* or use a specific color like #ff6b6b */
+}
+
+
+.credit-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.credit-icons img {
+    width: 1.75rem;
+    height: 1.75rem;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+
+.credit-icons img:hover {
+    transform: scale(1.1);
 }
