@@ -2,9 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Villa Al-Naseem</title>
+    <style>
+        /* Reset default margin */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .pdf-container {
+            margin-top: 4rem;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: hidden;
+        }
+
+        .header-banner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .header-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Section spacing */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        /* Overview grid */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .overview-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* PDF viewer */
+        .pdf-container {
+            margin-top: 4rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+
+    </style>
 </head>
 <body>
+<header class="header-banner">
+    <img src="../attachments/project_docs/project1/header.png" alt="Villa Al-Naseem Header">
+</header>
 
+
+<section>
+    <h1>Project Overview</h1>
+    <h2><strong>Location:</strong> Emirates, Abu Dhabi</h2>
+    <h2><strong>Area:</strong> 450 m²</h2>
+    <h2><strong>Project Definition:</strong><br>
+        This villa blends Emirati tradition with modern sustainability.<br>
+        Its design centers on privacy and comfort, with separate guest and family zones.<br>
+        A central courtyard enhances light, ventilation, and serenity.<br>
+        Elements like perforated façades, wind catchers, and local materials connect the villa to its desert context.<br>
+        More than a house, it’s a space that breathes, belongs, and reflects its cultural identity.
+    </h2>
+
+    <div class="overview-grid">
+        <img src="../attachments/project_docs/project1/projectOverview/33.jpg" alt="Overview 1">
+        <img src="../attachments/project_docs/project1/projectOverview/44.jpg" alt="Overview 2">
+        <img src="../attachments/project_docs/project1/projectOverview/55.jpg" alt="Overview 3">
+        <img src="../attachments/project_docs/project1/projectOverview/66.jpg" alt="Overview 4">
+        <img src="../attachments/project_docs/project1/projectOverview/77.jpg" alt="Overview 5">
+        <img src="../attachments/project_docs/project1/projectOverview/88.jpg" alt="Overview 6">
+    </div>
+
+    <div class="pdf-container">
+        <iframe src="../pdfjs/web/viewer.html?file=../attachments/project_docs/project1/setofslides.pdf"></iframe>
+    </div>
+</section>
 </body>
 </html>

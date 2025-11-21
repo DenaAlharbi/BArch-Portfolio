@@ -41,7 +41,7 @@ html, body {
     background-color:  var(--navbar-bg);
     backdrop-filter: blur(10px);
     font-family: 'Inter', sans-serif;
-    /*z-index: 1;*/
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,7 +340,7 @@ html, body {
 /*}*/
 
 .project-image {
-    width: 60%;
+    width: 70%;
     height: auto;
     object-fit: cover;
     border-radius: 0rem;
