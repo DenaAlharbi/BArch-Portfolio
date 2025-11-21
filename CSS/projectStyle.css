@@ -1,0 +1,110 @@
+    /* Base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Banner */
+.header-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.header-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* Section titles with palette accent */
+.section-title {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+.section-title.red {
+    color: #b22222; /* replace with your actual third palette color */
+}
+
+/* Overview grid */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+.overview-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Scrollable slide box (seamless) */
+.scroll-box {
+    width: 100%;
+    max-width: 900px;
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 0 auto 3rem;
+    padding-right: 0.5rem;
+    background: transparent;
+    border: none;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Slides styling */
+.scroll-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Hide scrollbar (keeps scrolling functional) */
+.scroll-box::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.scroll-box {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scroll-box {
+        max-height: 400px;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+}

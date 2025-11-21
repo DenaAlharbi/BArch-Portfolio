@@ -3,94 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Villa Al-Naseem</title>
-    <style>
-        /* Reset default margin */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #ffffff;
-        }
-
-        .pdf-container {
-            margin-top: 4rem;
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
-            overflow: hidden;
-        }
-
-        .header-banner {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .header-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-        }
-
-        /* Section spacing */
-        section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        /* Headings */
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #222;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        /* Overview grid */
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .overview-grid img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        /* PDF viewer */
-        .pdf-container {
-            margin-top: 4rem;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .pdf-container iframe {
-            width: 100%;
-            height: 700px;
-            border: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../CSS/projectStyle.css"/>
 </head>
 <body>
 <header class="header-banner">
     <img src="../attachments/project_docs/project1/header.png" alt="Villa Al-Naseem Header">
 </header>
-
 
 <section>
     <h1>Project Overview</h1>
@@ -113,13 +31,28 @@
         <img src="../attachments/project_docs/project1/projectOverview/88.jpg" alt="Overview 6">
     </div>
 
-    <div class="pdf-container">
-        <iframe src="./pdfjs/web/viewer.html?file=../../attachments/project_docs/project1/slides/setofslides.pdf"
-                width="100%" height="700" style="border:none;"></iframe>
+    <h1 class="section-title red">Architectural Design</h1>
+    <div class="scroll-box">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/1.png" alt="Slide 1">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/2.png" alt="Slide 2">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/3.png" alt="Slide 3">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/4.png" alt="Slide 4">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/5.png" alt="Slide 5">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/6.png" alt="Slide 6">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/7.png" alt="Slide 7">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/8.png" alt="Slide 8">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/9.png" alt="Slide 9">
+        <img src="../attachments/project_docs/project1/boxes/ArchDesign/10.png" alt="Slide 10">
+    </div>
 
-        580
-
+    <h1 class="section-title red">Systems Design</h1>
+    <div class="scroll-box">
+        <img src="../attachments/project_docs/project1/boxes/SysDesign/1.png" alt="Slide 1">
+        <img src="../attachments/project_docs/project1/boxes/SysDesign/2.png" alt="Slide 2">
+        <img src="../attachments/project_docs/project1/boxes/SysDesign/3.png" alt="Slide 3">
+        <img src="../attachments/project_docs/project1/boxes/SysDesign/4.png" alt="Slide 4">
     </div>
 </section>
 </body>
 </html>
+
