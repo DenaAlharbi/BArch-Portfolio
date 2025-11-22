@@ -93,33 +93,40 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
 .back-to-projects {
-    position: fixed; /* stays in place even when scrolling */
-    bottom: 1rem; /* distance from bottom edge */
-    left: 1rem; /* distance from left edge */
-    z-index: 1000; /* keep it above other elements */
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1000;
 }
 
 .back-button {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background-color: rgb(90, 89, 89); /* your accent color */
+    padding: 0.8rem 1.4rem;
+    background-color: rgb(90, 89, 89);
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 6px; /* softer corners */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* subtle depth */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .back-button:hover {
     background-color: var(--accent-color);
-    color: var(--accent-color);
-    transform: translateY(-2px); /* slight lift effect */
+    color: #fff; /* keep contrast */
+    transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+    .back-button {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        border-radius: 10px;
+    }
+}
 
 
 /* Hide scrollbar (keeps scrolling functional) */
@@ -142,4 +149,3 @@ h2 {
         font-size: 1.6rem;
     }
 }
-
