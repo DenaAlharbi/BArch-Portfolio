@@ -103,3 +103,84 @@ Keep file paths consistent — most issues come from incorrect relative paths.
 Use the same folder structure as project1 for reliability.
 
 Do not remove the Back to Projects button at the bottom of each project page.
+
+## 👩‍💻 For Developers
+
+If you’d like to adapt this portfolio for yourself, here are the main steps:
+
+### 1. Update the Title
+In `index.html`, change the `<title>` tag to your own name:
+```html
+<title>YourName-Portfolio</title>
+```
+### 2. Customize the Intro Section
+Edit the description inside #intro-section to reflect your background:
+
+```html
+<section id="intro-section" class="intro-container">
+  <img class="intro-pic2" src="attachments/main_images/mainPic.png" alt="Intro Image"/>
+  <div class="intro-description">
+    <p>
+      <!-- Replace this text with your own professional description -->
+    </p>
+  </div>
+</section>
+```
+- Replace mainPic.png with your own image in attachments/main_images/.
+
+- Update the <p> text with your personal description.
+
+### 3. Replace Homepage Images
+- In index.html, update any project thumbnails or placeholder images to match your work.
+- Make sure the paths point to your new files inside attachments/project_docs/project#/.
+
+### 4. Update Contact Information
+In #contact-section, replace the email and social links with your own:
+
+```html 
+<section id="contact-section" class="contact-container">
+  <h2 class="get-in-touch">Get in Touch</h2>
+  <p class="contact-intro">
+    I'd love to hear from you.<br>
+    Ideas, questions, or just hello — reach out!
+  </p>
+  <div class="contact-columns">
+    <div class="contact-details">
+      <h3>Reach Me At</h3>
+      <a href="mailto:your.email@example.com">@YourName</a>
+    </div>
+    <div class="social-section">
+      <h3>Social</h3>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/yourprofile/">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/yourhandle/">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+
+```
+### ⚠️ Important: Please keep the website credit at the bottom:
+```html
+<div class="website-credit">
+  <span id="credit-links">Website made by <a href="mailto:denauni2022@gmail.com">@DenaAlharbi</a> |</span>
+  <!-- credit icons remain unchanged -->
+</div>
+
+```
+
+### 5. Adjust Colors (Optional)
+You can change the theme colors in CSS/projectStyle.css under the :root variables:
+```css
+:root {
+  --primary-color: rgba(250, 249, 246, 0.11);
+  --secondary-color: #000000;
+  --accent-color: #DC143C; /* main highlight color */
+  --text-color: #000000;
+  --navbar-bg: rgba(0, 0, 0, 0);
+  --navbar-hover-border: rgb(220, 20, 60);
+  --navbar-hover: rgba(255, 255, 255, 0.47);
+  --navbar-border-color: rgb(0, 0, 0);
+}
+
+```
+#### ✨ With these edits, you’ll have your own personalized portfolio built on this structure, while keeping credits intact.
