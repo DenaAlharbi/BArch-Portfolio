@@ -1,10 +1,8 @@
 # BArch-Portfolio
 
-A portfolio created for **Sadeen Maher** to showcase her work, and for me to practice using **Tailwind CSS** for the first time.
+A portfolio created for **Sadeen Maher** to showcase her work, and for anyone who wants a ready-to-use portfolio
 
 ---
-
-## 📂 Project Structure
 ## 📂 Project Structure
 
 ```text
@@ -18,7 +16,7 @@ project-root/
 │   └── ...
 │
 ├── attachments/
-    ├──main_images/ do not edit
+│   ├── main_images/ do not edit
 │   └── project_docs/
 │       ├── project1/
 │       ├── project2/
