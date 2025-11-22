@@ -217,6 +217,12 @@ html, body {
     .about-text {
         font-size: 1.25rem;
     }
+    /* Intro placeholder image */
+    .intro-pic {
+        height: 40vh;         /* smaller height on mobile */
+        object-fit: cover;    /* crop nicely */
+        margin-top: 3.5rem;   /* adjust spacing below navbar */
+    }
 }/* Container for all projects */
 .projects-container {
     position: relative;
@@ -326,7 +332,10 @@ html, body {
     }
 
     .project-image-wrapper {
-        width: 100%;
+        width: 100%;          /* take full width on small screens */
+        height: auto;         /* let height adjust naturally */
+        max-height: 200px;    /* optional: cap height so it doesn’t get too tall */
+        overflow: hidden;     /* crop overflow if needed */
     }
 
     .project-image {
