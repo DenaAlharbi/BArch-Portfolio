@@ -156,3 +156,15 @@ h2 {
         border-radius: 10px;    /* slightly more rounded */
     }
 }
+@media screen and (max-width: 700px) {
+    /* Project description text */
+    section h1{
+        font-size: 1.5rem;
+    }
+    section h2,
+    .about-text,
+    .intro-description p {
+        font-size: 0.9rem;   /* smaller text */
+        line-height: 1.4;    /* tighter spacing */
+    }
+}
