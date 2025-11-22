@@ -1,7 +1,7 @@
 # BArch-Portfolio
 
-A portfolio created for **Sadeen Maher** to showcase her work, and for anyone who wants a ready-to-use portfolio
-The deployment link https://denaalharbi.github.io/BArch-Portfolio
+A portfolio created for **Sadeen Maher** to showcase her work, and for anyone who wants a ready-to-use portfolio.
+- The deployment link https://denaalharbi.github.io/BArch-Portfolio
 
 ---
 ## 📂 Project Structure
