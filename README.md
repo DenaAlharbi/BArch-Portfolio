@@ -16,7 +16,7 @@ project-root/
 │   └── ...
 │
 ├── attachments/
-    ├──main_images/ do not edit
+│   ├── main_images/ do not edit
 │   └── project_docs/
 │       ├── project1/
 │       ├── project2/
