@@ -1,36 +1,44 @@
-/* Base */
+/* ===========================
+   Base Styles
+   =========================== */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.8;
-    color: #333;
-    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif; /* clean, modern font stack */
+    line-height: 1.8;                           /* comfortable line spacing */
+    color: #333;                                /* default text color */
+    background-color: #ffffff;                  /* white background */
 }
 
-/* Banner */
+/* ===========================
+   Banner (Header Image)
+   =========================== */
 .header-banner {
     width: 100%;
-    display: flex;
+    display: flex;              /* center content horizontally/vertically */
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden;           /* hide overflow if image is larger */
 }
 
 .header-banner img {
-    width: 100%;
-    height: auto;
+    width: 100%;                /* responsive full width */
+    height: auto;               /* maintain aspect ratio */
     display: block;
-    object-fit: contain;
+    object-fit: contain;        /* scale image without cropping */
 }
 
-/* Sections */
+/* ===========================
+   Section Layout
+   =========================== */
 section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 4rem 2rem;         /* spacing around content */
+    max-width: 1000px;          /* limit width for readability */
+    margin: 0 auto;             /* center section */
 }
 
-/* Headings */
+/* ===========================
+   Headings
+   =========================== */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -43,7 +51,9 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Section titles with palette accent */
+/* ===========================
+   Section Titles (with accent)
+   =========================== */
 .section-title {
     font-size: 2rem;
     margin: 3rem 0 1.5rem;
@@ -52,100 +62,97 @@ h2 {
 }
 
 .section-title.red {
-    color: #b22222; /* replace with your actual third palette color */
+    color: #b22222; /* accent color (replace with palette color if needed) */
 }
 
-/* Overview grid */
+/* ===========================
+   Overview Grid (project images)
+   =========================== */
 .overview-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive grid */
+    gap: 1.5rem;                                                 /* spacing between items */
     margin-top: 2rem;
     margin-bottom: 4rem;
 }
 
 .overview-grid img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;                                          /* soft corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);                   /* subtle shadow */
 }
 
-/* Scrollable slide box (seamless) */
+/* ===========================
+   Scrollable Slide Box
+   =========================== */
 .scroll-box {
     width: 100%;
     max-width: 900px;
     max-height: 600px;
-    overflow-y: auto;
+    overflow-y: auto;                 /* vertical scroll */
     margin: 0 auto 3rem;
     padding-right: 0.5rem;
     background: transparent;
     border: none;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;          /* smooth scrolling */
+    -webkit-overflow-scrolling: touch;/* better scrolling on iOS */
 }
 
-/* Slides styling */
+/* Slides inside scroll-box */
 .scroll-box img {
     width: 100%;
     height: auto;
     display: block;
     margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;               /* rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* subtle shadow */
 }
+
+/* ===========================
+   Back to Projects Button
+   =========================== */
 .back-to-projects {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    z-index: 1000;
+    position: fixed;   /* stays visible while scrolling */
+    bottom: 1rem;      /* distance from bottom */
+    left: 1rem;        /* distance from left */
+    z-index: 1000;     /* ensure it stays above other elements */
 }
 
 .back-button {
     display: inline-block;
     padding: 0.8rem 1.4rem;
-    background-color: rgb(90, 89, 89);
-    color: #fff;
+    background-color: rgb(90, 89, 89); /* base button color */
+    color: #fff;                       /* text color */
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;                /* rounded corners */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* subtle shadow */
+    transition: background 0.3s ease, transform 0.2s ease; /* hover animation */
 }
 
 .back-button:hover {
-    background-color: var(--accent-color);
-    color: #fff; /* keep contrast */
-    transform: translateY(-2px);
+    background-color: var(--accent-color); /* accent color on hover */
+    color: #fff;                           /* keep text visible */
+    transform: translateY(-2px);           /* slight lift effect */
 }
 
-@media (max-width: 768px) {
-    .back-button {
-        padding: 0.6rem 0.9rem;
-        font-size: 0.8rem;
-        font-weight: 700;
-        border-radius: 10px;
-    }
-}
-
-
-/* Hide scrollbar (keeps scrolling functional) */
-.scroll-box::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
-
-.scroll-box {
-    scrollbar-width: none; /* Firefox */
-}
-
-/* Responsive adjustments */
+/* ===========================
+   Responsive Adjustments
+   =========================== */
 @media (max-width: 768px) {
     .scroll-box {
-        max-height: 400px;
+        max-height: 400px; /* smaller scroll box on mobile */
     }
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.6rem; /* smaller section titles */
+    }
+
+    .back-button {
+        padding: 0.6rem 0.9rem; /* smaller button padding */
+        font-size: 0.8rem;      /* smaller text */
+        font-weight: 700;       /* bold for readability */
+        border-radius: 10px;    /* slightly more rounded */
     }
 }
