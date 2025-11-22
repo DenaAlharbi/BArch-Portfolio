@@ -1,4 +1,4 @@
-    /* Base */
+/* Base */
 body {
     margin: 0;
     font-family: 'Segoe UI', Roboto, sans-serif;
@@ -15,6 +15,7 @@ body {
     align-items: center;
     overflow: hidden;
 }
+
 .header-banner img {
     width: 100%;
     height: auto;
@@ -35,6 +36,7 @@ h1 {
     margin-bottom: 1rem;
     color: #222;
 }
+
 h2 {
     font-size: 1.2rem;
     font-weight: 400;
@@ -48,6 +50,7 @@ h2 {
     font-weight: 600;
     text-align: left;
 }
+
 .section-title.red {
     color: #b22222; /* replace with your actual third palette color */
 }
@@ -60,10 +63,11 @@ h2 {
     margin-top: 2rem;
     margin-bottom: 4rem;
 }
+
 .overview-grid img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Scrollable slide box (seamless) */
@@ -87,14 +91,43 @@ h2 {
     display: block;
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
+.back-to-projects {
+    position: fixed; /* stays in place even when scrolling */
+    bottom: 1rem; /* distance from bottom edge */
+    left: 1rem; /* distance from left edge */
+    z-index: 1000; /* keep it above other elements */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: rgb(90, 89, 89); /* your accent color */
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px; /* softer corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* subtle depth */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-2px); /* slight lift effect */
+}
+
+
 
 /* Hide scrollbar (keeps scrolling functional) */
 .scroll-box::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
+
 .scroll-box {
     scrollbar-width: none; /* Firefox */
 }
@@ -104,7 +137,9 @@ h2 {
     .scroll-box {
         max-height: 400px;
     }
+
     .section-title {
         font-size: 1.6rem;
     }
 }
+
